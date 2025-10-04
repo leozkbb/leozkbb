@@ -1,177 +1,171 @@
-#🤖 Leonardo Mendes
+ <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mendespods</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #000;
+      color: #fff;
+    }
+    header {
+      background-color: #111;
+      text-align: center;
+      padding: 20px;
+      font-size: 2rem;
+      font-weight: bold;
+      color: gold;
+    }
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+    .product {
+      background: #1a1a1a;
+      border: 2px solid gold;
+      border-radius: 10px;
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(255,215,0,0.3);
+    }
+    .product img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    .product h3 {
+      margin: 10px 0;
+      color: gold;
+    }
+    .product p {
+      margin: 5px 0;
+    }
+    .whatsapp-btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 15px;
+      background: #25d366;
+      color: #fff;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    .whatsapp-btn:hover {
+      background: #1ebe5c;
+    }
+    footer {
+      background: #111;
+      text-align: center;
+      padding: 15px;
+      margin-top: 20px;
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+    /* Modal idade */
+    #ageModal {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.9);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      color: white;
+      z-index: 9999;
+    }
+    #ageModal button {
+      margin: 10px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: bold;
+    }
+    #enterBtn {
+      background: #25d366;
+      color: #fff;
+    }
+    #exitBtn {
+      background: red;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
 
-**`ESTUDANTE**
+  <div id="ageModal">
+    <h2>Você tem 18 anos ou mais?</h2>
+    <div>
+      <button id="enterBtn">Sim</button>
+      <button id="exitBtn">Não</button>
+    </div>
+  </div>
 
-Me chamo Leonardo Mendes , tenho 17 anos e sou natural de São Paulo . estou faznedo o 3 do o ensino médio no João Evangelista, e estou me preparando para servir o meu Pais . Atualmente, estou trabalhando de freelancer em uma outlet . Sou apaixonado por futebol e compartilho meu conhecimento através do meu canal no YouTube "[Leo](https://www.youtube.com/@leo)", onde ensino a como jogar.
+  <header>
+    Mendespods 👑🔥
+  </header>
 
-<p align="left">
-    <a href="https://www.youtube.com/@leo?sub_confirmation=1">
-        <img 
-            alt="youtube subscribers" 
-            title="Inscreva-se no meu canal" 
-            src="https://custom-icon-badges.demolab.com/youtube/channel/subscribers/UCo-gJ8RnTn5akHqHvO55DVA?color=%23E05D44&label=Inscreva-se&logo=video&logoColor=white&style=for-the-badge&labelColor=CE4630"
-        />
-    </a>
-    <a href="https://www.youtube.com/@leo">
-        <img 
-            alt="youtube views" 
-            title="Vizualizações no YouTube" 
-            src="https://custom-icon-badges.demolab.com/youtube/channel/views/UCo-gJ8RnTn5akHqHvO55DVA?color=%23E1AD0E&logo=eye&logoColor=white&style=for-the-badge&labelColor=C79600"
-        />
-    </a> 
-    <a href="https://github.com/Leo?tab=repositories&sort=stargazers">
-        <img 
-            alt="Total de estrelas" 
-            title="Total de estrelas GitHub" 
-            src="https://custom-icon-badges.demolab.com/github/stars/Larissakich?color=55960c&style=for-the-badge&labelColor=488207&logo=star&label=estrelas"
-        />
-    </a>
-    <a href="https://github.com/Leo?tab=followers">
-        <img 
-            alt="Seguidores" 
-            title="Me siga no GitHub" 
-            src="https://custom-icon-badges.demolab.com/github/followers/Larissakich?color=236ad3&labelColor=1155ba&style=for-the-badge&logo=github&label=Seguidores&logoColor=white"
-        />
-    </a>
-</p>
+  <main>
+    <section class="products" id="products">
+      <!-- Produtos -->
+    </section>
+  </main>
 
----
+  <footer>
+    © 2025 Mendespods - Todos os direitos reservados
+  </footer>
 
-### 🤖 Linguagens e Tecnologias
+  <script>
+    // CONFIGURAÇÃO WHATSAPP
+    const WHATSAPP_NUMBER = "5511983000691"; // teu número já adicionado
+    
+    // Produtos placeholder
+    const products = [
+      { name: "Produto 1", price: "R$ 100", img: "https://via.placeholder.com/300x200" },
+      { name: "Produto 2", price: "R$ 120", img: "https://via.placeholder.com/300x200" },
+      { name: "Produto 3", price: "R$ 90", img: "https://via.placeholder.com/300x200" },
+      { name: "Produto 4", price: "R$ 110", img: "https://via.placeholder.com/300x200" },
+      { name: "Produto 5", price: "R$ 150", img: "https://via.placeholder.com/300x200" },
+      { name: "Produto 6", price: "R$ 200", img: "https://via.placeholder.com/300x200" },
+      { name: "Produto 7", price: "R$ 75", img: "https://via.placeholder.com/300x200" },
+      { name: "Produto 8", price: "R$ 80", img: "https://via.placeholder.com/300x200" },
+      { name: "Produto 9", price: "R$ 95", img: "https://via.placeholder.com/300x200" },
+      { name: "Produto 10", price: "R$ 130", img: "https://via.placeholder.com/300x200" },
+      { name: "Produto 11", price: "R$ 140", img: "https://via.placeholder.com/300x200" },
+      { name: "Produto 12", price: "R$ 160", img: "https://via.placeholder.com/300x200" },
+    ];
 
-<img 
-    align="left" 
-    alt="HTML"
-    title="HTML" 
-    width="30px" 
-    style="padding-right: 10px;" 
-    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" 
-/>
-<img 
-    align="left" 
-    alt="CSS" 
-    title="CSS"
-    width="30px" 
-    style="padding-right: 10px;" 
-    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" 
-/>
-<img 
-    align="left" 
-    alt="JavaScript" 
-    title="JavaScript"
-    width="30px" 
-    style="padding-right: 10px;" 
-    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" 
-/>
-<img 
-    align="left" 
-    alt="TypeScript"
-    title="TypeScript" 
-    width="30px" 
-    style="padding-right: 10px;" 
-    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" 
-/>
-<img 
-    align="left" 
-    alt="React"
-    title="React" 
-    width="30px" 
-    style="padding-right: 10px;" 
-    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" 
-/>
-<img 
-    align="left" 
-    alt="Next.js" 
-    title="Next.js"
-    width="30px" 
-    style="padding-right: 10px;" 
-    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg" 
-/>
-<img 
-    align="left" 
-    alt="Bootstrap"
-    title="Bootstrap" 
-    width="30px" 
-    style="padding-right: 10px;" 
-    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg" 
-/>
-<img 
-    align="left" 
-    alt="Tailwind" 
-    title="Tailwind"
-    width="30px" 
-    style="padding-right: 10px;" 
-    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" 
-/>
-<img 
-    align="left" 
-    alt="SASS" 
-    title="SASS"
-    width="30px" 
-    style="padding-right: 10px;" 
-    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sass/sass-original.svg" 
-/>
-<img 
-    align="left" 
-    alt="PHP" 
-    title="PHP"
-    width="30px" 
-    style="padding-right: 10px;" 
-    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" 
-/>
-<img 
-    align="left" 
-    alt="Laravel" 
-    title="Laravel"
-    width="30px" 
-    style="padding-right: 10px;" 
-    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg" 
-/>
-<img 
-    align="left" 
-    alt="JQuery" 
-    title="JQuery"
-    width="30px" 
-    style="padding-right: 10px;" 
-    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jquery/jquery-original.svg" 
-/>
-<img 
-    align="left" 
-    alt="Git" 
-    title="Git"
-    width="30px" 
-    style="padding-right: 10px;" 
-    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" 
-/>
-<img 
-    align="left" 
-    alt="Python" 
-    title="Python"
-    width="30px" 
-    style="padding-right: 10px;" 
-    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" 
-/>
+    // Renderizar produtos
+    const container = document.getElementById("products");
+    products.forEach(p => {
+      const div = document.createElement("div");
+      div.classList.add("product");
+      div.innerHTML = `
+        <img src="${p.img}" alt="${p.name}">
+        <h3>${p.name}</h3>
+        <p>${p.price}</p>
+        <a class="whatsapp-btn" target="_blank"
+           href="https://wa.me/${WHATSAPP_NUMBER}?text=Salve,%20quero%20pedir%20${encodeURIComponent(p.name)}%20na%20Mendespods%20👊🔥">
+           Pedir via WhatsApp
+        </a>
+      `;
+      container.appendChild(div);
+    });
 
-<br/>
-<br/>
+    // Modal idade
+    const ageModal = document.getElementById("ageModal");
+    document.getElementById("enterBtn").onclick = () => { ageModal.style.display = "none"; };
+    document.getElementById("exitBtn").onclick = () => { window.location.href = "https://www.google.com"; };
+  </script>
 
-### 📊 Estatísticas
-
-<p>
-  <img 
-    align="left" 
-    alt="GitHub Stats" 
-    height="200" 
-    style="padding-right: 10px;" 
-    src="https://github-readme-stats.vercel.app/api?username=Leo&show_icons=true&theme=tokyonight&include_all_commits=true&locale=pt-br" 
-  />
-
-<img 
-      align="left" 
-      alt="GitHub Stats" 
-      height="200" 
-      src="https://github-readme-stats.vercel.app/api/top-langs/?username=leo&theme=tokyonight&layout=compact&custom_title=Tecnologias&langs_count=9" 
-  />
-
-</p>
-Leonardo Mendes
+</body>
+</html>
